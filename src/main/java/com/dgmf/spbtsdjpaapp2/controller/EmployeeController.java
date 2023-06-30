@@ -22,6 +22,8 @@ public class EmployeeController {
     private List<Employee> getAllEmployees() {
         List<Employee> employees = employeeService.getAllEmployees();
 
+        System.out.println(employees);
+
         return employees;
     }
 }
