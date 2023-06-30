@@ -26,4 +26,14 @@ public class EmployeeController {
 
         return employees;
     }
+
+    @GetMapping("/{lncontains}")
+    public List<Employee> findEmployeeByLastNameContaining(
+            @PathVariable("lncontains") String string,
+            @RequestParam("str") String str) {
+        List<Employee> RetrievedEmployees = employeeService.findEmployeeByLastNameContaining(str);
+        // System.out.println(RetrievedEmployees);
+
+        return RetrievedEmployees;
+    };
 }

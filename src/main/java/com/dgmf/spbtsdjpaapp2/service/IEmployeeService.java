@@ -8,4 +8,6 @@ public interface IEmployeeService {
     Employee saveEmployee(Employee employee);
 
     List<Employee> getAllEmployees();
+
+    List<Employee> findEmployeeByLastNameContaining(String str);
 }

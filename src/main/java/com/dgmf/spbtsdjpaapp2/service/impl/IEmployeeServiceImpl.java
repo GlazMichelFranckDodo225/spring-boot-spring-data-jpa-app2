@@ -21,4 +21,9 @@ public class IEmployeeServiceImpl implements IEmployeeService {
     public List<Employee> getAllEmployees() {
         return (List<Employee>) employeeRepository.findAll();
     }
+
+    @Override
+    public List<Employee> findEmployeeByLastNameContaining(String str) {
+        return employeeRepository.findEmployeeByLastNameContaining(str);
+    }
 }
